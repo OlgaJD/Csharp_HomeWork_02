@@ -24,7 +24,7 @@ try
         case < 100:
             Console.WriteLine("Третьей цифры нет");
             break;
-        case > 99 and <= 1000:
+        case > 99 and < 1000:
             SayThirdDigit();
             break;
         case > 999:
