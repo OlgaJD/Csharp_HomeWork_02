@@ -4,13 +4,24 @@
 // 782 -> 8
 // 918 -> 1
 
-int PrintSecond()
+void PrintSecond()
 {
     Console.Write("Введите трехзначное число: ");
     int x = Convert.ToInt32(Console.ReadLine());
-    if (x < 0)
-        x = -x;
-    int y = x % 100 / 10;
-    return y;
+    for (int a = -1; x < 0; x = a * x) ;
+    if (x < 1000 && x > 99)
+    {
+        int y = x % 100 / 10;
+        Console.WriteLine(y);
+    }
+    else
+        Console.WriteLine("Число должно быть целым, трехзначным");
 }
-Console.WriteLine(PrintSecond());
+try
+{
+    PrintSecond();
+}
+catch
+{
+    Console.WriteLine("Вводите только целые, трехзначные числа");
+}
